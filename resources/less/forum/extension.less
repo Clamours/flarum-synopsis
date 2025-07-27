@@ -1,0 +1,85 @@
+.DiscussionListItem-info .item-excerpt {
+  margin-top: 8px;
+  margin-right: 20px;
+  white-space: normal;
+  font-size: 12px;
+  line-height: 1.5em;
+  color: @muted-more-color;
+  display: block!important;
+
+  // * {
+  //   max-width: auto;
+  // }
+
+  //.DiscussionPage-list & {
+  //  display: none;
+  //}
+
+
+    .ianm-synopsis-excerpt{
+
+    }
+
+    .ianm-synopsis-text{
+        padding-bottom: 8px;
+    }
+
+    .ianm-synopsis-resource{
+        //padding-top: 8px;
+        padding-bottom: 8px;
+        //width: 10000px;
+    }
+
+    .ianm-synopsis-gallary{
+        display: flex;
+        flex-wrap: wrap;
+      // float: left;
+        list-style: none;
+        padding: 0;
+        transition: height 1s ease;
+        max-width: 450px; // 300px * 3 + 10px * 2 for margins
+      
+        li {
+          float: left;
+          display: block;
+        //   margin-right: 10px;
+          padding: 0;
+          padding-bottom: 5px;
+          padding-right: 8px;
+          position: relative;
+      
+          @media (max-width: 767px) {
+            &:nth-child(n+2) {
+              display: none; // hide images after the first one
+            }
+      
+            img {
+              display: block;
+              vertical-align: middle;
+              max-width: 250px;
+              max-height: 170px;
+              object-fit: cover;
+              border-radius: 4px;
+              transition: height 1s ease;
+            }
+          }
+      
+          @media (min-width: 768px) {
+            &:nth-child(n+4) {
+              display: none; // hide images after the third one
+            }
+      
+            img {
+              display: block;
+              vertical-align: middle;
+              width: 130px;
+              height: 130px;
+              object-fit: cover;
+              border-radius: 4px;
+              margin-right: 8px;
+            }
+          }
+        }
+      }
+
+}
